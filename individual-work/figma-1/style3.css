@@ -11,7 +11,8 @@ body {
     gap: 50%;
     z-index: 3;
     position: relative;
-
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .navbar {
@@ -19,19 +20,69 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     font-size: 20px;
+    margin-right: -60%;
 }
 
 .navbar a {
     text-decoration: none;
     color: black;
     height: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+}
+
+.logo {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 10%;
+    top: 1.75%;
+}
+
+
+.names {
+    display: grid;
+    grid-template-columns: 21vw 21vw;
+    grid-template-rows: 6vh 6vh;
+    row-gap: 10px;
+    column-gap: 2vw;
+}
+
+.name {
+    width: 21vw;
+    background-color: #7c747430;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.name::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.message textarea {
+    background-color: #7c747430;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 1vw;
+    resize: none;
+    height: 150px;
+}
+
+.nameInputWrapper {
+    position: absolute;
+    top: 5vh;
+    width: 44vw;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.a::placeholder {
+    color: black;
+    opacity: 1;
 }
 
 .foter {
@@ -47,11 +98,93 @@ body {
     text-align: center;
 }
 
-.logo {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    left: 10%;
-    top: 10%;
+.hamburger {
+    display: none;
 }
 
+.ham {
+    width: 95%;
+    background-color: black;
+    height: 30%;
+    border-radius: 20%;
+}
+
+@media(max-width: 500px) {
+    .hamburger {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        flex-direction: column;
+        gap: 10%;
+        margin-top: 12.5%;
+        margin-right: -80%;
+    }
+
+    .header {
+        height: 160px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .foter {
+        width: 100%;
+        margin-top: 70%;
+    }
+
+    .logo {
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .names {
+        display: grid;
+        grid-template-columns: 50vw;
+        grid-template-rows: 6vh 6vh 6vh 6vh;
+        row-gap: 10px;
+
+        column-gap: 2vw;
+    }
+
+    .name {
+        width: 50vw;
+
+        background-color: #7c747430;
+
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .name::placeholder {
+        color: black;
+        opacity: 1;
+    }
+
+    .message textarea {
+        background-color: #7c747430;
+        width: 50vw;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-top: 3vw;
+
+        resize: none;
+        height: 150px;
+    }
+
+    .nameInputWrapper {
+        position: absolute;
+        top: -5vh;
+        left: 45vw;
+    }
+
+    .a::placeholder {
+        color: black;
+        opacity: 1;
+    }
+
+
+}
